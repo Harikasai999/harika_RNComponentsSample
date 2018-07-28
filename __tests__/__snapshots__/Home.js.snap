@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 44,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "lightgrey",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#181818",
+            "fontSize": 16,
+            "fontWeight": "800",
+            "textAlign": "center",
+          }
+        }
+      >
+        Main
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4290415362,
+          4279769112,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 1,
+          "y": 0.5,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      startPoint={
+        Object {
+          "x": 0,
+          "y": 0.5,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 5,
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Gill Sans",
+            "fontSize": 18,
+            "margin": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </BVLinearGradient>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+        "paddingLeft": 20,
+        "paddingRight": 20,
+      }
+    }
+  >
+    <BVLinearGradient
+      colors={
+        Array [
+          4290415362,
+          4279769112,
+        ]
+      }
+      endPoint={
+        Object {
+          "x": 1,
+          "y": 0.5,
+        }
+      }
+      locations={
+        Array [
+          0,
+          1,
+        ]
+      }
+      startPoint={
+        Object {
+          "x": 0,
+          "y": 0.5,
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 5,
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Gill Sans",
+            "fontSize": 18,
+            "margin": 10,
+            "textAlign": "center",
+          }
+        }
+      >
+        Load More
+      </Text>
+    </BVLinearGradient>
+  </View>
+</View>
+`;
