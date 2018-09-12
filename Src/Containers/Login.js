@@ -32,12 +32,6 @@ class Login extends Component<Props> {
       password: ''
     }
   }
-  onChangeText(text) {
-    alert('' + text)
-    // this.setState({
-    // email:
-    // })
-  }
 
   render() {
     var label = 'Email'

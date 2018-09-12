@@ -66,8 +66,10 @@ class Index extends Component<Props> {
       Actions.message()
     } else if (Item.button_name == 'Articles') {
       Actions.articles()
+    } else if (Item.button_name == 'Others') {
+      Actions.others()
     } else {
-      alert('GASdghjg')
+      alert('No')
     }
   }
   renderItem(Item) {
