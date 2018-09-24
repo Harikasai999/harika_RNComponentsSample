@@ -19,7 +19,6 @@ var array = [
   {
     button_name: 'Swiper'
   },
-
   {
     button_name: 'Charts'
   },
@@ -28,6 +27,9 @@ var array = [
   },
   {
     button_name: 'Modal Picker'
+  },
+  {
+    button_name: 'Network Connection'
   }
 ]
 type Props = {}
@@ -45,6 +47,8 @@ export default class Others extends Component<Props> {
       Actions.swiper()
     } else if (Item.button_name === 'Charts') {
       Actions.chart()
+    }else if (Item.button_name === 'Network Connection') {
+      Actions.networkConnection()
     } else {
       alert('askfjgajdf')
     }

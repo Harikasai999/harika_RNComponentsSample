@@ -6,19 +6,19 @@
 
 import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
+
 import { BarChart, Grid, PieChart, ProgressCircle, StackedBarChart, LineChart, YAxis, XAxis } from 'react-native-svg-charts'
 type Props = {}
 class LineChartWithY_Axis extends Component<Props> {
   render() {
     const yAxisData = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
-    const lineDataWithYaxis = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
+    // const lineDataWithYaxis = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
     const contentInset = { top: 20, bottom: 20 }
     return (
       <View style={{ flex: 1, marginTop: 20 }}>
         <View style={{ height: 200, flexDirection: 'row' }}>
           <YAxis
-            data={lineDataWithYaxis}
+            data={yAxisData}
             contentInset={contentInset}
             svg={{
               fill: 'grey',

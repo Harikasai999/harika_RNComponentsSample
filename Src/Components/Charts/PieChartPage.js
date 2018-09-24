@@ -1,40 +1,76 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react'
-import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
-import { BarChart, Grid, PieChart, ProgressCircle, StackedBarChart, LineChart, YAxis, XAxis } from 'react-native-svg-charts'
-type Props = {}
-class PieChartPage extends Component<Props> {
+import React from 'react'
+import { PieChart } from 'react-native-svg-charts'
+import { G } from 'react-native-svg'
+import { Text } from 'react-native-svg'
+import { View, Text as RNText } from 'react-native'
+class PieChartPage extends React.PureComponent {
+  constructor(props) {
+    super(props)
+    this.state = {
+      labelValue: 0
+    }
+  }
+  onDataValue(data) {
+    this.setState({
+      labelValue: data.amount
+    })
+  }
   render() {
-    const pieChartData = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
-
-    const randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
-
-    const pieData = pieChartData.filter(value => value > 0).map((value, index) => ({
-      value,
-      svg: {
-        fill: randomColor(),
-        onPress: () => console.log('press', index)
+    const pieChartData = [
+      {
+        key: 1,
+        amount: 50,
+        svg: { fill: 'hotpink' }
       },
-      key: `pie-${index}`
-    }))
+      {
+        key: 2,
+        amount: 50,
+        svg: { fill: 'green' }
+      },
+      {
+        key: 3,
+        amount: 40,
+        svg: { fill: 'black' }
+      },
+      {
+        key: 4,
+        amount: 75,
+        svg: { fill: 'blue' }
+      },
+      {
+        key: 5,
+        amount: 35,
+        svg: { fill: 'red' }
+      },
+      {
+        key: 6,
+        amount: 65,
+        svg: { fill: 'orange' }
+      }
+    ]
+
+    const Labels = ({ slices, height, width }) => {
+      return slices.map((slice, index) => {
+        const { labelCentroid, pieCentroid, data } = slice
+        return (
+          <G onPress={this.onDataValue.bind(this, data)}>
+            <Text key={index} x={pieCentroid[0]} y={pieCentroid[1]} fill={'white'} textAnchor={'middle'} alignmentBaseline={'middle'} fontSize={24} stroke={'black'} strokeWidth={0.2}>
+              {data.amount}
+            </Text>
+          </G>
+        )
+      })
+    }
+
     return (
-      <View style={{ flex: 1, marginTop: 20 }}>
-        <PieChart style={{ height: 200 }} data={pieData} />
+      <View style={{ flex: 1 }}>
+        <PieChart style={{ height: 200 }} valueAccessor={({ item }) => item.amount} data={pieChartData} spacing={0} outerRadius={'95%'}>
+          <Labels />
+        </PieChart>
+        <RNText style={{ textAlign: 'center', fontSize: 16, fontWeight: '700' }}>Value:{this.state.labelValue}</RNText>
       </View>
     )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-    // backgroundColor: 'white'
-  }
-})
 export default PieChartPage

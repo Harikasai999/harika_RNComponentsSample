@@ -10,6 +10,7 @@ import ChatList from './Messaging/ChatList'
 import Articles from './Articles/Articles'
 import Swiper from './Others/SwiperPage'
 import Chart from './Others/ChartPage'
+import NetworkConnection from './Others/NetworkConnection'
 /***************************
  * Documentation: https://github.com/aksonov/react-native-router-flux
  ***************************/
@@ -28,7 +29,8 @@ class Navigation extends Component {
           <Scene key="chatList" component={ChatList} hideNavBar={true} />
           <Scene key="articles" component={Articles} hideNavBar={true} />
           <Scene key="swiper" component={Swiper} hideNavBar={true} />
-          <Scene key="chart" component={Chart} hideNavBar={true} />
+          <Scene key="chart" component={Chart} hideNavBar={true} /> 
+          <Scene key="networkConnection" component={NetworkConnection} hideNavBar={true} />
         </Scene>
       </Router>
     )

@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import LinearGradient from 'react-native-linear-gradient'
+
 import { BarChart, Grid, PieChart, ProgressCircle, StackedBarChart, LineChart, YAxis, XAxis } from 'react-native-svg-charts'
 type Props = {}
 class LineChartsPage extends Component<Props> {
