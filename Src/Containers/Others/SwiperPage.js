@@ -6,7 +6,6 @@
 
 import React, { Component } from 'react'
 import { Platform, StyleSheet, View, ListView, Text, TouchableOpacity, ScrollView, Dimensions } from 'react-native'
-import CustomNavbar from './../../Components/CustomNavbar'
 import LinearGradient from 'react-native-linear-gradient'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import GridView from 'react-native-super-grid'
@@ -14,6 +13,7 @@ import { Actions } from 'react-native-router-flux'
 import colors from './../../Themes/Colors'
 import Swiper from 'react-native-swiper'
 const window = Dimensions.get('window')
+import CustomNavbar from './../../Components/CustomNavbar'
 var items = [{ title: 'Hello Swiper', css: 'pink' }, { title: 'Beautiful', css: 'yellow' }, { title: 'And simple', css: 'lightblue' }]
 
 type Props = {}
